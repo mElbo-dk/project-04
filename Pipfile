@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 psycopg2-binary = "*"
+djangorestframework = "*"
+django = "*"
+pyjwt = "*"
 
 [requires]
 python_version = "3.7"
