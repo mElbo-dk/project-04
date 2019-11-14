@@ -14,8 +14,8 @@ class Document(models.Model):
 
 
 class Update(models.Model): 
-
-    updated_by = models.CharField(max_length=50)
+    updated_by = models.CharField(max_length=50 , null=True)
+    # updated_by = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE)
     update_decription = models.CharField(max_length=50, null=True)
     updated_at = models.DateTimeField(auto_now=True)
     document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name='update', null=True)

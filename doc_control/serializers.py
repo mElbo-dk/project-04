@@ -24,4 +24,4 @@ class DocumentSerializer(serializers.ModelSerializer):
     updates = NestedUpdateSerializer(required=False) 
     class Meta:
         model = Document
-        fields = ('id', 'decription', 'created_at', 'updates', 'document')
+        fields = ('id', 'decription', 'created_at', 'updates')
