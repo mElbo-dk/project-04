@@ -6,9 +6,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
 	entry: './src/app.js',
+	context: path.resolve(__dirname, 'frontend'),
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve('dist'),
+		path: path.resolve(__dirname, 'fronend/dist'),
 		publicPath: '/'
 	},
 	module: {
@@ -29,12 +30,12 @@ module.exports = {
 		contentBase: path.resolve('src'),
 		hot: true,
 		open: true,
-		port: 8000,
+		port: 4000,
 		watchContentBase: true,
 		historyApiFallback: true,
 		proxy: {
 			'/api': {
-				target: 'http://localhost:4000',
+				target: 'http://localhost:8000',
 				secure: false
 			}
 		}

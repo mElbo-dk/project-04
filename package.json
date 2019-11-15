@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/mElbo-dk/project-04#readme",
   "scripts": {
-    "serve:front": "webpack-dev-server --mode-development"
+    "serve:front": "webpack-dev-server --mode-development",
+    "serve:back": "python manage.py runserver"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
