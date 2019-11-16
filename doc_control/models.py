@@ -14,12 +14,12 @@ class Document(models.Model):
 
 
 class Update(models.Model): 
-    updated_by = models.CharField(max_length=50 , null=True)
-    # updated_by = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE)
+    # updated_by = models.CharField(max_length=50 , null=True)
+    updated_by = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE, default=None) 
     update_decription = models.CharField(max_length=50, null=True)
     updated_at = models.DateTimeField(auto_now=True)
-    document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name='update', null=True)
+    document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name='updates', null=True)
  
 
     def __str__(self):
-        return self.updated_by
+        return f'{self.update_decription} -{self.updated_by}'

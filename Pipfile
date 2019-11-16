@@ -8,15 +8,9 @@ autopep8 = "*"
 
 [packages]
 psycopg2-binary = "*"
-<<<<<<< HEAD
 django = "*"
 pyjwt = "*"
 djangorestframework = "*"
-=======
-djangorestframework = "*"
-django = "*"
-pyjwt = "*"
->>>>>>> development
 
 [requires]
 python_version = "3.7"
