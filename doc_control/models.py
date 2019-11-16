@@ -5,18 +5,30 @@ User = get_user_model()
 
 class Document(models.Model):
 
+<<<<<<< HEAD
     description = models.CharField(max_length=50)
+=======
+    decription = models.CharField(max_length=50)
+>>>>>>> a0dddc3... user add to serializers
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, related_name='created_by', on_delete=models.CASCADE, default=None) 
 
     def __str__(self):
+<<<<<<< HEAD
         return f'{self.description} - {self.created_by}'
+=======
+        return f'{self.decription} - {self.created_by}'
+>>>>>>> a0dddc3... user add to serializers
 
 
 class Update(models.Model):
 
     updated_by = models.ForeignKey(User, related_name='updated_by', on_delete=models.CASCADE, default=None) 
+<<<<<<< HEAD
     update_description = models.CharField(max_length=50, null=True)
+=======
+    update_decription = models.CharField(max_length=50, null=True)
+>>>>>>> a0dddc3... user add to serializers
     updated_at = models.DateTimeField(auto_now=True)
     document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name='updates', null=True)
 
