@@ -21,10 +21,10 @@ const App = () => (
 				<Navbar />
 				<Switch>
 				  <Route exact path="/" component={Home} />
-					<Route path="/register" component={Register} />
-					<Route path="/login" component={Login} />
-					<Route path="/edit" component={Edit} />
-					<Route path="/Create" component={Create} />	
+				  <Route path="/register" component={Register} />
+				  <Route path="/login" component={Login} />
+				  <Route path="/edit" component={Edit} />
+				  <Route path="/Create" component={Create} />	
 				</Switch>
 	<Footer />
 	</>

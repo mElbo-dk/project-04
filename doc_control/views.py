@@ -1,5 +1,5 @@
 # pylint: disable=no-member
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Document, Update
 from .serializers import DocumentSerializer, UpdateSerializer
@@ -16,11 +16,11 @@ class DocumentDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
 
-class UpdateListView(ListAPIView):
+class UpdateListView(ListCreateAPIView):
     queryset = Update.objects.all()
     serializer_class = UpdateSerializer
 
-class UpdateDetailView(RetrieveAPIView):
+class UpdateDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Update.objects.all()
     serializer_class = UpdateSerializer
 
