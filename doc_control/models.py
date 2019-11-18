@@ -5,7 +5,7 @@ User = get_user_model()
 
 class Document(models.Model):
 
-    drawing = models.ImageField(upload_to='assets/',null=True)
+    drawing = models.ImageField(upload_to='assets/', null=True)
     description = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, related_name='created_by', on_delete=models.CASCADE, default=None) 
