@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 class Create extends React.Component {
 
@@ -15,6 +16,13 @@ class Create extends React.Component {
 		console.log('Before setting state', fileSelected)
 		this.setState({ file: fileSelected })
 		console.log('file set in state')
+	}
+
+	onSubmit(e) {
+		e.preventDefault()
+		axios.post('/api', this.state.data, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
+			.then(res => this.props.history.push(`/library/${res.data._id}`))
+			.catch(err => console.log(err))
 	}
 
 
@@ -59,6 +67,7 @@ class Create extends React.Component {
 									<input type="file" onChange={this.fileSelectedHandler}/>
 									<button onClick={this.fileUploadHandler}>Upload</button>
 								</div>
+							<button type="submit" className="button is-dark is-3-columns">Submit</button>
 						</form>
 					</div>
 				</section>
