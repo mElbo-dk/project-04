@@ -17,6 +17,7 @@ class RegisterView(APIView):
             serializer.save()
             return Response({'message': 'Registration successful'})
         return Response(serializer.errors, status=422)
+from datetime import datetime, timedelta
 
 class LoginView(APIView):
 
