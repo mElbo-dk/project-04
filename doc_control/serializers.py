@@ -18,7 +18,11 @@ class NestedDocumentSerializer(serializers.ModelSerializer):
     created_by = UserSerializer()
     class Meta:
         model = Document
+<<<<<<< HEAD
         fields = ('id', 'created_by', 'description', 'created_at', 'drawing')
+=======
+        fields = ('id', 'created_by', 'description', 'created_at')
+>>>>>>> development
 
 class UpdateSerializer(serializers.ModelSerializer):
     updated_by = UserSerializer()
@@ -39,4 +43,8 @@ class DocumentListSerializer(serializers.ModelSerializer):
     updates = NestedUpdateSerializer(required=False, many=True)
     class Meta:
         model = Document
+<<<<<<< HEAD
         fields = ('id', 'created_by', 'description', 'created_at', 'updates', 'drawing')
+=======
+        fields = ('id', 'created_by', 'description', 'created_at', 'updates')
+>>>>>>> development

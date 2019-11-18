@@ -5,19 +5,43 @@ User = get_user_model()
 
 class Document(models.Model):
 
+<<<<<<< HEAD
     drawing = models.ImageField(upload_to='assets/', null=True)
     description = models.CharField(max_length=50, default=None)
+=======
+<<<<<<< HEAD
+    description = models.CharField(max_length=50)
+=======
+    decription = models.CharField(max_length=50)
+>>>>>>> a0dddc3... user add to serializers
+>>>>>>> development
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, related_name='created_by', on_delete=models.CASCADE, default=None) 
 
     def __str__(self):
+<<<<<<< HEAD
         return f'{self.description} - {self.created_by}'
+=======
+<<<<<<< HEAD
+        return f'{self.description} - {self.created_by}'
+=======
+        return f'{self.decription} - {self.created_by}'
+>>>>>>> a0dddc3... user add to serializers
+>>>>>>> development
 
 
 class Update(models.Model):
 
     updated_by = models.ForeignKey(User, related_name='updated_by', on_delete=models.CASCADE, default=None) 
+<<<<<<< HEAD
     update_description = models.CharField(max_length=50, null=True)
+=======
+<<<<<<< HEAD
+    update_description = models.CharField(max_length=50, null=True)
+=======
+    update_decription = models.CharField(max_length=50, null=True)
+>>>>>>> a0dddc3... user add to serializers
+>>>>>>> development
     updated_at = models.DateTimeField(auto_now=True)
     document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name='updates', null=True)
 

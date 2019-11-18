@@ -2,7 +2,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
 import 'bulma'
 import './style.scss'
 
@@ -12,7 +11,9 @@ import Footer from './components/common/Footer'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Edit from './components/edit/Edit'
-import Create from './components/Create/Create'
+import Create from './components/create/Create'
+import Library from './components/create/Library'
+
 
 
 const App = () => (
@@ -25,6 +26,10 @@ const App = () => (
 				  <Route path="/login" component={Login} />
 				  <Route path="/edit" component={Edit} />
 				  <Route path="/Create" component={Create} />	
+<<<<<<< HEAD
+					<Route path="/library" component={Library} />	
+=======
+>>>>>>> a0dddc3... user add to serializers
 				</Switch>
 	<Footer />
 	</>
