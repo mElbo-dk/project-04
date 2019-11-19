@@ -1,30 +1,31 @@
 import React from 'react'
 import axios from 'axios'
+import FileUpload from '../common/FileUpload'
 
 class Create extends React.Component {
 
 	constructor() {
 		super()
 		this.state={
-			file: {}
+			data: {}
 		}
-		this.fileSelectedHandler = this.fileSelectedHandler.bind(this)
-	}
-
-	fileSelectedHandler(e) {
-		const fileSelected = event.target.files[0]
-		console.log('Before setting state', fileSelected)
-		this.setState({ file: fileSelected })
-		console.log('file set in state')
+		this.handleChange = this.handleChange.bind(this)
+		this.onSubmit = this.onSubmit.bind(this)
 	}
 
 	onSubmit(e) {
 		e.preventDefault()
-		axios.post('/api', this.state.data, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
-			.then(res => this.props.history.push(`/library/${res.data._id}`))
+		console.log(this.state.data)
+		axios.post('/api/documents/', this.state.data, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
+			.then(res => this.props.history.push(`/library/${res.data.id}`))
 			.catch(err => console.log(err))
 	}
 
+	handleChange({ target: { name, value, type, checked } }){
+		this.setState(({ data }) => ({
+			data: { ...data, [name]: type === 'checkbox' ? checked : value }
+		}))
+	}
 
 	render() {
 		console.log('render area', this.state)
@@ -40,32 +41,22 @@ class Create extends React.Component {
 					<div className="container columns">
 						<form onSubmit={this.onSubmit} className="column is-12">
 							<div className="field">
-								<label className="label">Document ID</label>
-								<div className="control">
-									<input
-										className="input"
-										name="Description"
-										placeholder="Description"
-										onChange={this.onChange}
-									/>
-								</div>
-							</div>
-
-							<div className="field">
 								<label className="label">Description</label>
 								<div className="control">
 									<input
 										className="input"
-										type="Edit"
-										name="Edit"
-										placeholder="Edit"
-										onChange={this.onChange}
+										name="description"
+										placeholder="Description"
+										onChange={this.handleChange}
 									/>
 								</div>
 							</div>
 							<div>
-									<input type="file" onChange={this.fileSelectedHandler}/>
-									<button onClick={this.fileUploadHandler}>Upload</button>
+									<FileUpload 
+										fieldName="drawing"
+										handleChange={this.handleChange}
+										labelText="Select your file"
+									/>
 								</div>
 							<button type="submit" className="button is-dark is-3-columns">Submit</button>
 						</form>

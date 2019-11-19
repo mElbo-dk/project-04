@@ -12,7 +12,7 @@ class Library extends React.Component {
 
 	componentDidMount() {
 		axios
-			.get('/api/documents')
+			.get('/api/documents/')
 			.then(res => this.setState({ documents: res.data }))
 			.catch(err => console.log(err))
 	}
