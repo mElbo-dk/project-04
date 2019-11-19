@@ -40,9 +40,9 @@ class Create extends React.Component {
 				<section className="Create_form">
 					<div className="Create_bottom"></div>
 					<div className="container columns">
-						<form onSubmit={this.onSubmit} className="column is-12">
+						<form onSubmit={this.onSubmit} className="column is-8">
 							<div className="field">
-								<label className="label">Description</label>
+								<label className="label">Create your Document</label>
 								<div className="control">
 									<input
 										className="input"
