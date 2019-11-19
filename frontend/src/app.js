@@ -18,8 +18,6 @@ import DocumentShow from './components/create/DocumentShow'
 
 
 
-
-
 const App = () => (
   <BrowserRouter>
 			<>
@@ -32,8 +30,8 @@ const App = () => (
 				  <Route path="/Create" component={Create} />	
 					<Route path="/Library" component={Library} />
           <Route path="/documents/:id" component={DocumentShow} />
-          
-        </Switch>
+				</Switch>
+
 	<Footer />
 	</>
   </BrowserRouter>
