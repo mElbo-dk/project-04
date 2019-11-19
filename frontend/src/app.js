@@ -26,11 +26,7 @@ const App = () => (
 				  <Route path="/login" component={Login} />
 				  <Route path="/edit" component={Edit} />
 				  <Route path="/Create" component={Create} />	
-<<<<<<< HEAD
-					<Route path="/library" component={Library} />
-=======
-					<Route path="/library" component={Library} />	
->>>>>>> development
+					<Route path="/Library" component={Library} />
 				</Switch>
 	<Footer />
 	</>
