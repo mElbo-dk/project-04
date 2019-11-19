@@ -33,11 +33,11 @@ class Create extends React.Component {
 		return (
 		<>
 				<section className="Create_upload">
-					<div id="container_create">
+					<div id="container_create" >
 					</div>
 				</section>
 			
-				<section className="Create_form">
+				<section className="Create_form is-half">
 					<div className="Create_bottom"></div>
 					<div className="container columns">
 						<form onSubmit={this.onSubmit} className="column is-8">

@@ -1,6 +1,6 @@
 # pylint: disable=no-member
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_204_NO_CONTENT
 from .models import Document, Update
@@ -32,7 +32,7 @@ class DocumentDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class = DocumentListSerializer
 
 class UpdateListView(ListCreateAPIView):
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticated, )
 
     def get(self, _request):
         update = Update.objects.all()

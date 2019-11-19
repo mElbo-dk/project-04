@@ -7,7 +7,8 @@ class Library extends React.Component {
 	constructor() {
 		super()
 		this.state = {
-			documents: null
+      documents: null
+      
 		}
 	}
 
@@ -15,15 +16,21 @@ class Library extends React.Component {
 		axios
 			.get('/api/documents')
 			.then(res => this.setState({ documents: res.data }))
-			.catch(err => console.log(err))
+      .catch(err => console.log(err))
+
 	}
+
 
 
 
 	render() {
 
-		console.log(this.state)
-		const { documents } = this.state
+		
+    const { documents } = this.state
+    console.log(documents)
+    
+    
+
 		if (!documents) return null
 		return (
 
@@ -31,15 +38,11 @@ class Library extends React.Component {
 				<div className="container">
 					{documents.map(document => (
 						<div key={document.id} className="document-index">
-<<<<<<< HEAD
-							<DocumentCard {...document} />
-=======
 							<Link to={`/document/${document.id}`}>{document.description}</Link>
-							<p> Description: {document.updates[0].update_description}</p>
+							{/* <p> Description: {document.updates[0].update_description}</p> */}
 							<p>By: {document.created_by.username}</p>
 							<p>At: {document.created_at}</p>
 							<img src={`./../../${document.drawing}`} height='50'/>
->>>>>>> development
 						</div>
 					))}
 				</div>
@@ -54,7 +57,3 @@ class Library extends React.Component {
 export default Library
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> development
