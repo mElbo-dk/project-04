@@ -39,3 +39,11 @@ class DocumentListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Document
         fields = ('id', 'created_by', 'description', 'created_at', 'updates', 'drawing')
+
+
+class UpdateListSerializer(UpdateSerializer):
+    updated_by = UserSerializer()
+    document = NestedDocumentSerializer()
+    # class Meta:
+    #     model = Update
+    #     fields = ('id', 'updated_by', 'updated_at', 'update_description', 'document') 
