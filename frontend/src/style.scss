@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.document-index {
+  flex: 1;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 20px; 
+  min-width: 250px;
+  max-width: 250px;
+  flex-grow: 1;
+  border-radius: 20px;
+}

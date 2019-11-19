@@ -27,7 +27,6 @@ class Library extends React.Component {
 		return (
 
 			<section className="section-library">
-
 				<div className="container">
 					{documents.map(document => (
 						<div key={document.id} className="document-index">
@@ -35,7 +34,7 @@ class Library extends React.Component {
 							<p> Description: {document.updates[0].update_description}</p>
 							<p>By: {document.created_by.username}</p>
 							<p>At: {document.created_at}</p>
-		
+							<img src={`./../../${document.drawing}`} height='50'/>
 						</div>
 					))}
 				</div>

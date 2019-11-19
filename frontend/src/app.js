@@ -26,10 +26,7 @@ const App = () => (
 				  <Route path="/login" component={Login} />
 				  <Route path="/edit" component={Edit} />
 				  <Route path="/Create" component={Create} />	
-<<<<<<< HEAD
-					<Route path="/library" component={Library} />	
-=======
->>>>>>> a0dddc3... user add to serializers
+					<Route path="/library" component={Library} />
 				</Switch>
 	<Footer />
 	</>
