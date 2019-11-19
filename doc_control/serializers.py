@@ -21,8 +21,7 @@ class NestedDocumentSerializer(serializers.ModelSerializer):
         fields = ('id', 'created_by', 'description', 'created_at', 'drawing')
 
 class UpdateSerializer(serializers.ModelSerializer):
-    updated_by = UserSerializer()
-    document = NestedDocumentSerializer()
+
     class Meta:
         model = Update
         fields = ('id', 'updated_by', 'updated_at', 'update_description', 'document')

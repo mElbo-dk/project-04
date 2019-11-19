@@ -4,6 +4,6 @@ from .views import DocumentListView, DocumentDetailView, UpdateListView, UpdateD
 urlpatterns = [
     path('documents', DocumentListView.as_view()),
     path('documents/<int:pk>/', DocumentDetailView.as_view()),
-    path('updates', UpdateListView.as_view()),
-    path('updates/<int:pk>/', UpdateDetailView.as_view())
+    path('documents/<int:pk>/update', UpdateListView.as_view()),
+    path('documents/<int:pk>/updates', UpdateDetailView.as_view())
     ]
