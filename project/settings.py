@@ -142,3 +142,6 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'jwt_auth.User'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
