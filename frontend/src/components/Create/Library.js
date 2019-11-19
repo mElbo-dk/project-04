@@ -34,7 +34,8 @@ class Library extends React.Component {
 							<p> Description: {document.updates[0].update_description}</p>
 							<p>By: {document.created_by.username}</p>
 							<p>At: {document.created_at}</p>
-							<img src={`./../../${document.drawing}`} height='50'/>
+							<img src={`${document.drawing}`} height='50' />
+						
 						</div>
 					))}
 				</div>
