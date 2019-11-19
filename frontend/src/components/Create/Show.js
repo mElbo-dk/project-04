@@ -12,7 +12,7 @@ class Library extends React.Component {
 
 	componentDidMount() {
 		axios
-			.get('/api/documents')
+			.get('/api/documents/')
 			.then(res => this.setState({ documents: res.data }))
 			.catch(err => console.log(err))
 	}
@@ -28,7 +28,7 @@ class Library extends React.Component {
 
 			<section className="section-library">
 				<div className="container">
-					{documents.map(document => (
+				
 						<div key={document.id} className="document-index">
 							<Link to={`/document/${document.id}`}>{document.description}</Link>
 							<p> Description: {document.updates[0].update_description}</p>
@@ -36,7 +36,7 @@ class Library extends React.Component {
 							<p>At: {document.created_at}</p>
 							<img src={`./../../${document.drawing}`} height='50'/>
 						</div>
-					))}
+					
 				</div>
 
 			</section>
@@ -47,5 +47,4 @@ class Library extends React.Component {
 
 
 export default Library
-
 
