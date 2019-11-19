@@ -1,18 +1,39 @@
 import React from 'react'
 // import EditComponent from "../edit/EditComponent"
+import axios from 'axios'
+import Auth from '../../lib/auth'
+
+
 
 class Edit extends React.Component {
 
 constructor() {
 	super()
 	this.state={
-		description:''
+    update_description:''
+    
+
 	}
-	this.handleChange=this.handleChange.bind(this)
+  this.handleChange=this.handleChange.bind(this)
+  this.onSubmit = this.onSubmit.bind(this)
 }
 
+onSubmit(e) {
+  e.preventDefault()
+  let id = 1
+  
+  axios.post(`/api/documents/${id}/update`, this.state, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
+    .then(res => {
+      // console.log(res.data)
+      
+      this.props.history.push('/Library')
+    })
+    .catch(err => console.log(err))
+}
+
+
 handleChange(e) {
-this.setState({description:e.target.value})
+this.setState({update_description:e.target.value})
 }
 
 	render() {

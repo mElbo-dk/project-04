@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import FileUpload from '../common/FileUpload'
+import Auth from '../../lib/auth'
 
 class Create extends React.Component {
 
