@@ -27,18 +27,18 @@ class UpdateSerializer(serializers.ModelSerializer):
         fields = ('id', 'updated_by', 'updated_at', 'update_description', 'document')
 
 class DocumentSerializer(serializers.ModelSerializer):
-    updates = NestedUpdateSerializer(required=False, many=True)
+    # updates = NestedUpdateSerializer(required=False, many=True)
     class Meta:
         model = Document
-        fields = ('id', 'created_by', 'description', 'created_at', 'updates', 'drawing')
+        fields = ('id', 'created_by', 'description', 'created_at', 'drawing')
 
 
 class DocumentListSerializer(serializers.ModelSerializer):
     created_by = UserSerializer()
-    updates = NestedUpdateSerializer(required=False, many=True)
+    # updates = NestedUpdateSerializer(required=False, many=True)
     class Meta:
         model = Document
-        fields = ('id', 'created_by', 'description', 'created_at', 'updates', 'drawing')
+        fields = ('id', 'created_by', 'description', 'created_at', 'drawing')
 
 
 class UpdateListSerializer(UpdateSerializer):

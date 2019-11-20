@@ -12,7 +12,7 @@ class Footer extends React.Component {
       <footer className="footer">
         <div className="content has-text-centered">
           <p>
-            <strong>Version Control Doc</strong> by <a href="https://github.com/mElbo-dk/project-04">Old People</a>. This website is powered by Elbo Grease
+            <strong>Version Control Doc</strong> by <a href="https://github.com/mElbo-dk/project-04">Old People</a>. This website is powered by Olly's Elbo Grease
           </p>
         </div>
       </footer>

@@ -20,9 +20,9 @@ constructor() {
 
 onSubmit(e) {
   e.preventDefault()
-  let id = 1
+
   
-  axios.post(`/api/documents/${id}/update`, this.state, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
+  axios.post(`/api/documents/${this.props.match.params.id}/update`, this.state, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
     .then(res => {
       // console.log(res.data)
       
@@ -37,7 +37,7 @@ this.setState({update_description:e.target.value})
 }
 
 	render() {
-		console.log(this.state)
+		console.log(this.props.match.params.id)
 		return (
 			<>
 			<section className="Edit_canvas">

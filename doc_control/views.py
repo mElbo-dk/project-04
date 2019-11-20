@@ -13,7 +13,7 @@ class DocumentListView(ListCreateAPIView):
 
     def get(self, _request):
         documents = Document.objects.all()
-        serializer_get = DocumentListSerializer(documents, many=True)
+        serializer_get = DocumentListSerializer(documents, many=True) 
         return Response(serializer_get.data)
 
     def post(self, request):
@@ -22,8 +22,9 @@ class DocumentListView(ListCreateAPIView):
         # print(request.data)
         if document.is_valid():
             document.save()
+            # print(document.data)
             return Response(document.data, status=HTTP_201_CREATED)
-        return Response(document.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)   
+        return Response(document.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
 
 
 class DocumentDetailView(RetrieveUpdateDestroyAPIView):
@@ -40,15 +41,15 @@ class UpdateListView(ListCreateAPIView):
         return Response(serializer_get.data)
 
 
-    def post(self, request, pk): 
-        request.data['updated_by'] = request.user.id 
+    def post(self, request, pk):
+        request.data['updated_by'] = request.user.id
         request.data['document'] = pk
-        update = UpdateSerializer(data=request.data) 
+        update = UpdateSerializer(data=request.data)
         print(request.data)
         if update.is_valid():
             update.save()
             return Response(update.data, status=HTTP_201_CREATED) 
-        return Response(update.errors, status=HTTP_422_UNPROCESSABLE_ENTITY) 
+        return Response(update.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
 
 class UpdateDetailView(RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticatedOrReadOnly, )

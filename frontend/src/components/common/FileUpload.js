@@ -30,7 +30,9 @@ class FileUpload extends Component {
 	}
 
 	render() {
-		const { image, loading } = this.state
+    
+    const { image, loading } = this.state
+    
 		return (
 			<>
 				{(image || loading) ?

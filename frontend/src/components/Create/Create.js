@@ -17,7 +17,7 @@ class Create extends React.Component {
 	onSubmit(e) {
 		e.preventDefault()
 		console.log(this.state.data)
-		axios.post('/api/documents/', this.state.data, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
+		axios.post('/api/documents', this.state.data, { headers: { Authorization: `Bearer ${Auth.getToken()}` } })
 			.then(res => this.props.history.push(`/library/${res.data.id}`))
 			.catch(err => console.log(err))
 	}

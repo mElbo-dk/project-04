@@ -27,7 +27,7 @@ class Library extends React.Component {
 
 		
     const { documents } = this.state
-    console.log(documents)
+    // console.log(documents)
     
     
 

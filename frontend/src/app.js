@@ -26,10 +26,11 @@ const App = () => (
 				  <Route exact path="/" component={Home} />
 				  <Route path="/register" component={Register} />
 				  <Route path="/login" component={Login} />
-				  <Route path="/edit" component={Edit} />
+				  <Route path="/edit/:id" component={Edit} />
 				  <Route path="/Create" component={Create} />	
 					<Route path="/Library" component={Library} />
           <Route path="/documents/:id" component={DocumentShow} />
+
 				</Switch>
 
 	<Footer />

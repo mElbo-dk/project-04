@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-const DocumentCard = ({id, description, drawing, updates, created_by, created_at }) => (
+//updates is deleted
+const DocumentCard = ({id, description, drawing, created_by, created_at }) => ( 
 	<div className="column is-fullwidth">
 		
 		<div className="card">
@@ -15,7 +15,8 @@ const DocumentCard = ({id, description, drawing, updates, created_by, created_at
 					<img src={`${drawing}`} />
 				</figure>
 				<div className="card-content">
-					<h5 className="title is-6">Last update: {updates[0].update_description}</h5>
+					{/* <h5 className="title is-6">Last update: {updates[0].update_description}</h5> */}
+          
 					<h6 className="title is-6">By {created_by.username}</h6>
 					<h6 className="title is-6">Created at {created_at}</h6>
 				</div>
