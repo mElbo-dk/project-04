@@ -21,6 +21,13 @@ h1 {
   
 }
 
+.container_library {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
 .document-index {
   flex: 1;
   border: 2px solid black;
@@ -66,3 +73,18 @@ max-width: 600px;
   padding: 10px 20px;
 }
 
+#root > section.section_login > div.login_top {
+  border: 2px solid black;
+  text-align: left;
+  margin: 20px; 
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+#root > section > div.register_top_left {
+   border: 2px solid black;
+  text-align: left;
+  margin: 20px; 
+  border-radius: 20px;
+  padding: 10px 20px;
+}
