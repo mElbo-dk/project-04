@@ -55,4 +55,4 @@ class UpdateDetailView(RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticatedOrReadOnly, )
     # queryset = Document.objects.all()
     queryset = Update.objects.all()
-    serializer_class = UpdateListSerializer
+    serializer_class = UpdateSerializer
