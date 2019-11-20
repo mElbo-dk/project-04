@@ -5,9 +5,6 @@
   width: 400px;
 }
 
-.Create_form {
-margin: 15vh;
-}
 
 
 h1 {
@@ -35,3 +32,37 @@ h1 {
   flex-grow: 1;
   border-radius: 20px;
 }
+
+.card {
+  text-align: left;
+  width: 90%;
+  // height: 80vh;
+  // flex-wrap: wrap;
+  // justify-content: start;
+}
+
+#root > div > div.card-image {
+
+display: flex;
+justify-content: start;
+height: 80vh;
+}
+
+#root > div > div.card-image > figure {
+min-width: 600px;
+max-width: 600px;
+
+}
+
+#root > section > section.Create_form.is_half {
+ height: 80vh;
+}
+
+#root > section > div.Create_bottom {
+  border: 2px solid black;
+  text-align: left;
+  margin: 20px; 
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+

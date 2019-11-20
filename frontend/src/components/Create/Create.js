@@ -32,17 +32,18 @@ class Create extends React.Component {
 		console.log('render area', this.state)
 		return (
 		<>
-				<section className="Create_upload">
+				{/* <section className="Create_upload">
 					<div id="container_create" >
 					</div>
-				</section>
+				</section> */}
 			
 				<section className="Create_form is-half">
-					<div className="Create_bottom"></div>
+					<div className="Create_bottom">
 					<div className="container columns">
 						<form onSubmit={this.onSubmit} className="column is-8">
 							<div className="field">
 								<label className="label">Create your Document</label>
+								<hr></hr>
 								<div className="control">
 									<input
 										className="input"
@@ -51,16 +52,21 @@ class Create extends React.Component {
 										onChange={this.handleChange}
 									/>
 								</div>
+								<hr></hr>
 							</div>
+						
 							<div>
 									<FileUpload 
 										fieldName="drawing"
 										handleChange={this.handleChange}
-										labelText="Select your file"
+										labelText=   "   Select your file   "
 									/>
 								</div>
+								<hr></hr>
 							<button type="submit" className="button is-dark is-3-columns">Submit</button>
+							<hr></hr>
 						</form>
+						</div>
 					</div>
 				</section>
 
