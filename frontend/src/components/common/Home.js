@@ -7,7 +7,7 @@ class Home extends React.Component {
     <>
       <h1>Welcome to Document Version Control</h1>
 
-      <img className='homeImage' src='../../assets/70186_2.jpg' alt='file cabinet' height='300px'/>
+      <img className='homeImage' src='../../assets/cabinet.jpg' alt='file cabinet' height='300px'/>
       </>
     )
   }
