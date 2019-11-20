@@ -40,12 +40,12 @@ this.setState({update_description:e.target.value})
 		console.log(this.props.match.params.id)
 		return (
 			<>
-			<section className="Edit_canvas">
+			{/* <section className="Edit_canvas">
 			<div id="container">
 					<p>{this.state.description}</p>
 						<img src="../../assets/images/plan4.png" />
 			</div>
-			</section>
+			</section> */}
 			<section className="Edit_form">
 				<div className="Edit_bottom"></div>
 				<div className="container columns">
@@ -75,15 +75,3 @@ this.setState({update_description:e.target.value})
 }
 
 export default Edit
-
-	// < div className = "field" >
-	// 	<label className="label">Document ID</label>
-	// 	<div className="control">
-	// 		<input
-	// 			className="input"
-	// 			name="Description"
-	// 			placeholder="Description"
-	// 			onChange={this.onChange}
-	// 		/>
-	// 	</div>
-	// 					</div > 
