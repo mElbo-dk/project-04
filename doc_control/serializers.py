@@ -46,6 +46,6 @@ class UpdateListSerializer(UpdateSerializer):
     document = NestedDocumentSerializer()
     updates = UpdateSerializer(required=False, many=True)
 
-    class Meta:
-        model = Update
-        fields = ('id', 'updated_by', 'updated_at', 'update_description', 'document', 'updates')
+    # class Meta:
+    #     model = Update
+    #     fields = ('id', 'updated_by', 'updated_at', 'update_description', 'document', 'updates')
