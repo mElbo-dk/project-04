@@ -75,16 +75,20 @@ max-width: 600px;
 
 #root > section.section_login > div.login_top {
   border: 2px solid black;
-  text-align: left;
+  text-align: center;
   margin: 20px; 
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 #root > section > div.register_top_left {
    border: 2px solid black;
-  text-align: left;
+  text-align: center;
   margin: 20px; 
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 20px;
+}
+
+#root > section.section_login > div.login_top > div.container.columns {
+  text-align: center;
 }
