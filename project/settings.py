@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'doc_control',
-    'jwt_auth'
+    'jwt_auth',
+    'frontend'
 ]
 
 MIDDLEWARE = [
