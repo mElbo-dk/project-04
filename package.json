@@ -15,7 +15,10 @@
   "homepage": "https://github.com/mElbo-dk/project-04#readme",
   "scripts": {
     "serve:front": "webpack-dev-server --mode-development",
-    "serve:back": "python manage.py runserver"
+    "serve:back": "python manage.py runserver",
+    "build": "webpack -p",
+    "serve:frontend": "webpack-dev-server",
+    "serve:backend": "python manage.py runserver 4000"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -61,4 +64,9 @@
     "react-select": "^3.0.8",
     "url-loader": "^2.2.0"
   }
+
+ 
+    
+  
+
 }
