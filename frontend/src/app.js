@@ -11,9 +11,9 @@ import Footer from './components/common/Footer'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Edit from './components/edit/Edit'
-import Create from './components/create/Create'
-import Library from './components/create/Library'
-import DocumentShow from './components/create/DocumentShow'
+import Create from './components/Create/Create'
+import Library from './components/Create/Library'
+import DocumentShow from './components/Create/DocumentShow'
 
 
 
