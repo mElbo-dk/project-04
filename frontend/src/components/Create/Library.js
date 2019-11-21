@@ -35,8 +35,8 @@ class Library extends React.Component {
 		return (
 
 			<section className="section-library">
-				<h1>Your Library</h1>
-				<div className="container_library">
+        <h1>Library</h1>
+				<div className="container">
 					{documents.map(document => (
 						<div key={document.id} className="document-index">
 							<DocumentCard {...document} />
