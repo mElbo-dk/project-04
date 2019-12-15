@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'frontend'
 ]
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -133,6 +135,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
