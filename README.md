@@ -53,7 +53,10 @@ The Django framework was made as pretty much self study.
 We spend some days trying to figurer out how to upload and store the drawings diretcly in the PostgreSQL database with a uniq number. This was not good use of time since Heroku does not allow this. We had to change to and use Cloudinary to store the files that then can be called with a URL. The only change I had to make in the backend was the field type in the model, but time spend does not come back. 
 My learnings from this project is not only on the technical side with the Django framework and React but also a lot on the personal plan and not giving up even if the timelimit seems impossible.  
 
+## Deployment
+The local build is done with python and the NodeJs. I had to install some additional packages to create the build (psycopg2-binary and djnago-heroku).
 
+Heroku hosting PostgreSQL is a bit different than other database types I have delt with. For starting the database build on Heroku I had to run commands on the  Heroku-server to migrate the database. 
 
 ## Author
 
