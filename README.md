@@ -16,12 +16,12 @@ The idea came from the problems we have been facing when rebuilding a house. Wha
 4. JWT token
 5. Python
 6. web-pack
-7. MongoDb
+7. PostgreSQL
 
 ## How it works
 
 To get any data in or out a user have to register with password and email. After register the user is send to login to type in email and password. For upload a drawing choose create in the top menu. 
-When a drawing is uploaded the time and name is loaded to the MongoDb together with the username. We can now add comments to the drawing or upload more drawings.
+When a drawing is uploaded the time and name is loaded to the PostgreSQL together with the username. We can now add comments to the drawing or upload more drawings.
 
 ![readme-one](images/create.png)
 
@@ -33,7 +33,7 @@ If the user choose to make a comment / update to a document the time, date and u
 
 ## Code and structure
 
-Django is a framework for Python or for most of it I were using build in functions. The framework can use Mongo and create data structure in a SQL database via the models. Then to make the API inteface to axios we programmed serializers and call them from views via url's.
+Django is a framework for Python or for most of it I were using build in functions. The framework can use PostgreSQL and create data structure in a SQL database via the models. Then to make the API inteface to axios we programmed serializers and call them from views via url's.
 
 ![readme-one](images/backend_view.png) 
 
@@ -50,7 +50,7 @@ Django have a function that sets up a file structure where for us when called. T
 ## Challanges and learnings in this project.
 I was doing the backend for the project and the learning curve was steap. 
 The Django framework was made as pretty much self study. 
-We spend some days trying to figurer out how to upload and store the drawings diretcly in the mongo database with a uniq number. This was not good use of time since Heroku does not allow this. We had to change to and use Cloudinary to store the files that then can be called with a URL. The only change I had to make in the backend was the field type in the model, but time spend does not come back. 
+We spend some days trying to figurer out how to upload and store the drawings diretcly in the PostgreSQL database with a uniq number. This was not good use of time since Heroku does not allow this. We had to change to and use Cloudinary to store the files that then can be called with a URL. The only change I had to make in the backend was the field type in the model, but time spend does not come back. 
 My learnings from this project is not only on the technical side with the Django framework and React but also a lot on the personal plan and not giving up even if the timelimit seems impossible.  
 
 
